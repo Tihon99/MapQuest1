@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MapQuest</string>
+    <string name="mapText">Показать на карте</string>
+    <string name="title_activity_novel">Novel</string>
+</resources>
