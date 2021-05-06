@@ -77,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Intent intent = getIntent();
+        flagQuest = intent.getBooleanExtra("flag", false );
+
     }
 
     @Override
@@ -84,9 +87,8 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         Log.d("LifeActivity", "Start: " + flagQuest);
-        Intent intent = getIntent();
-        flagQuest = intent.getBooleanExtra("flag", false );
-        Log.d("LifeActivity", "Start: " + flagQuest +" " + intent.toString());
+        showMapButton.setClickable(flagQuest);
+        //Log.d("LifeActivity", "Start: " + flagQuest +" " + intent.toString());
     }
 
     @Override

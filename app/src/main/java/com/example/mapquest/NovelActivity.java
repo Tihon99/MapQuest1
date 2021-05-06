@@ -42,8 +42,8 @@ public class NovelActivity extends AppCompatActivity {
 
         ArrayList<Integer> partNovel = getIntent().getIntegerArrayListExtra("PART");
 
-        readFile(1);
-        String lines[] = readFile(2).split("\n");
+        readFile(partNovel.get(0));
+        String lines[] = readFile(partNovel.get(0)).split("\n");
 
         count = 1;
         textNovella.setText(lines[count]);
@@ -55,7 +55,7 @@ public class NovelActivity extends AppCompatActivity {
                 if (!lines[count + 1].equals("")) {
                     count++;
                     textNovella.setText(lines[count]);
-                    if (count == lines.length) {
+                    if (count + 1 == lines.length) {
                         buttonRight.setText("Вернуться на карту");
                     }
                 } else {
